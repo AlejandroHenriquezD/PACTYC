@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Lista de Coches</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let user of Users">
+      <ion-label>
+        <h2>{{user.brand}}</h2>
+        <h3>{{user.model}}</h3>
+        <h3>{{user.price}} €</h3>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/update/', user.id]">
+          <ion-icon name="create" style="zoom:1.5"></ion-icon>
+        </button>
+        <button ion-button clear (click)="removeUser(user)">
+          <ion-icon name="trash" style="zoom:1.5"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-img class="img" src="../../assets/icon/h.png"></ion-img>
+  </ion-item>
+</ion-content>

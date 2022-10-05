@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "app_user")
+@Table(name = "coches")
 public class AppUser implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -18,38 +18,48 @@ public class AppUser implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	long id;
-	
-	String name;
-	String surname;
+		
+	String brand;
+	String model;
+	String price;
 	
 	public AppUser() {
 		super();
 	}
 	
-	public AppUser(String name, String surname) {
+	public AppUser(String brand,String model,  String price) {
 		super();
-		this.name = name;
-		this.surname = surname;
+		this.model = model;
+		this.brand = brand;
+		this.price = price;
 	}
 	
 	
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getModel() {
+		return model;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setModel(String model) {
+		this.model = model;
 	}
-	public String getSurname() {
-		return surname;
+	public String getBrand() {
+		return brand;
 	}
-	public void setSurname(String surname) {
-		this.surname = surname;
+	public void setBrand(String brand) {
+		this.brand = brand;
 	}
 	
 	

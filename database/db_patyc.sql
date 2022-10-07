@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `db_putacollartoyourchild` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `db_putacollartoyourchild`;
 -- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
 --
 -- Host: localhost    Database: db_putacollartoyourchild
@@ -18,28 +16,29 @@ USE `db_putacollartoyourchild`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `app_user`
+-- Table structure for table `coches`
 --
 
-DROP TABLE IF EXISTS `app_user`;
+DROP TABLE IF EXISTS `coches`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `app_user` (
+CREATE TABLE `coches` (
   `id` int NOT NULL AUTO_INCREMENT,
   `brand` varchar(45) NOT NULL,
   `model` varchar(45) NOT NULL,
   `price` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `app_user`
+-- Dumping data for table `coches`
 --
 
-LOCK TABLES `app_user` WRITE;
-/*!40000 ALTER TABLE `app_user` DISABLE KEYS */;
-/*!40000 ALTER TABLE `app_user` ENABLE KEYS */;
+LOCK TABLES `coches` WRITE;
+/*!40000 ALTER TABLE `coches` DISABLE KEYS */;
+INSERT INTO `coches` VALUES (5,'Volkswagen','Polo','20.500'),(13,'Ferrari','Italia','245.900');
+/*!40000 ALTER TABLE `coches` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-21 16:47:33
+-- Dump completed on 2022-10-07 12:25:18

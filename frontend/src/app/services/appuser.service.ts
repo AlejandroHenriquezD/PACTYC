@@ -69,7 +69,7 @@ export class AppuserService {
   }
 
   deleteUser(id): Observable<appUser[]> {
-    return this.httpClient.delete<appUser[]>(this.endPoint + '/' + id, this.httpOptions)
+    return this.httpClient.delete<appUser[]>(this.endPoint + '/' + id)
       .pipe(
         tap(_ => console.log(`User deleted: ${id}`)),
         catchError(this.handleError<appUser[]>('Delete user'))
